@@ -104,10 +104,17 @@ namespace DIS_Class_3
         {
             Console.WriteLine("The car is going as fast as it can!");
         }
-
-            static void Main(string[] args)
+        enum Level
         {
+            Low,
+            Medium,
+            High
+        }
 
+        static void Main(string[] args)
+        {
+            Level myVar = Level.Medium;
+            Console.WriteLine(myVar);
             DemoClass myObjs = new DemoClass();
             myObjs.myMethod();
             myObjs.myOtherMethod();
@@ -164,6 +171,19 @@ namespace DIS_Class_3
             Console.WriteLine(myObj2.color);
             Console.WriteLine(myObj.color);
             Console.WriteLine(myObj.maxSpeed);
+            try
+            {
+                int[] myNumbers = { 1, 2, 3 };
+                Console.WriteLine(myNumbers[10]);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Something went wrong.");
+            }
+            finally
+            {
+                Console.WriteLine("The 'try catch' is finished.");
+            }
         }
     }
 }
